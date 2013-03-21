@@ -6,13 +6,17 @@ gem 'rails', '3.2.8'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-group :development, :test do
+group :development do
   gem "rspec-rails"
+  gem "rspec"
+  gem "capybara"
   gem "webrat"
+  gem "simplecov-rcov"
 end
 
 group :test do
-  gem "cucumber-rails"
+  gem "cucumber-rails", :require => false
+  gem "cucumber"
 end
 
 # Gems used only for assets and not required
